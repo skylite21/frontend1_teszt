@@ -169,6 +169,23 @@ header {
   padding-left: 0.8rem;
 }
 
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  margin: 0.5rem;
+}
+
+.gallery-item img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
 /* 960px alat... */
 @media (max-width: 960px) {
   header {
