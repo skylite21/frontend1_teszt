@@ -1,0 +1,14 @@
+{
+  "name": "html-css-start",
+  "version": "1.0.0",
+  "description": "starter kit for html and css projects",
+  "main": "index.js",
+  "scripts": {
+    "serve": "live-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}

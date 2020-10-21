@@ -1,0 +1,111 @@
+/* * { */
+
+/*   * */
+
+/* } */
+
+/* element selector */
+body {
+  background-color: #488ccd;
+  width: 800px;
+  padding: 40px;
+  font-family: 'Montserrat', sans-serif;
+
+  /*
+   * jobbra balra auto: automatikus margó: blokk elemek középre igazításra használjuk
+   * csak akkor működik a margin 0 auto, ha az elemnek nem 100% a szélessége
+   */
+  margin: 0 auto;
+
+  /* ez le öröklődik, az összes html elemre.. */
+  color: white;
+}
+
+/* class selector */
+.page-title {
+  color: white;
+  font-size: 50px;
+  font-weight: 200;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.main-menu {
+  background-color: #284c80;
+  padding: 0;
+}
+
+.main-menu-item {
+  /* az inline-block típus miatt az elemek egymás mellé kerülnek, és módosítható a magasságuk is */
+  display: inline-block;
+}
+
+/* minden olyan a taget kiválaszt ami .main-menu-item -ben van benne */
+.main-menu-item a {
+  /*
+   * az a tag inline elem alapértelmezetten!!
+   * inline elemeknek nem lehet a magasságát módosítani, ezért nem működik
+   * és pl a height property sem...
+   */
+  display: block;
+  margin-left: 20px;
+  text-decoration: none;
+  color: rgb(188, 248, 255);
+
+  /*
+   * ha a padding property kettő értéket kap, akkor az első érték az alul-fölül,
+   * a második érték pedig jobbra-balra értendő
+   */
+  padding: 20px 0;
+}
+
+/* a menüpont hover állapotát választja ki */
+.main-menu-item a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 35px;
+  color: rgb(237, 245, 255);
+  margin-bottom: 5px;
+  margin-top: 100px;
+}
+
+.created-date {
+  margin-bottom: 40px;
+  font-style: italic;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.content-lead,
+.content-body {
+  line-height: 1.7;
+}
+
+.content-lead {
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.content-body {
+  font-size: 18px;
+}
+
+.content-image-container {
+  /*
+   * a font-al kapcsolatos tulajdonságok öröklődnek,
+   * tehát az itt beállított középre igazítás a beljebb lévő
+   * elemekre is rárakódik,
+   * inline elemeket, text-align centerrel igazítunk középre,
+   * emiatt a belső dolgok kerülnek középre...
+   */
+  text-align: center;
+}
+
+figcaption {
+  font-size: 12px;
+  color: white;
+  font-style: italic;
+}
