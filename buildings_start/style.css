@@ -24,3 +24,254 @@ html {
   font-family: 'Heebo', sans-serif;
   background-color: #333448;
 }
+
+body {
+  /* shorthand property */
+  margin: 0;
+  background: url(./img/banner-s.jpg) no-repeat center 50px;
+  height: 1500px;
+  background-size: 100%;
+  position: relative;
+  overflow-x: hidden;
+  transition: right 0.5s ease-in-out;
+  right: 0;
+}
+
+header {
+  background-color: #fff;
+  padding: 0 10vw;
+}
+
+.header-container {
+  display: flex;
+  height: 7rem;
+  align-items: center;
+}
+
+.logo {
+  background-color: #036cd8;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+
+  /* order: 1; */
+}
+
+.logo a {
+  color: white;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 4rem;
+  text-decoration: none;
+}
+
+.main-menu {
+  flex-grow: 1;
+}
+
+.main-menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.main-menu ul li {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-menu ul li::after {
+  content: "~";
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #caab4e;
+}
+
+.main-menu ul li:last-child::after {
+  /*
+   * a display none, az kiveszi az elemet, a visibility: hidden
+   * az pedig otthagyja csak átlátszóvá teszi;
+   */
+
+  visibility: hidden;
+}
+
+.main-menu ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+}
+
+.search-bar {
+  position: relative;
+}
+
+.search-field {
+  width: 100%;
+  border: 1px solid #e0e0e0;
+  font-size: 1.6rem;
+  height: 3rem;
+  padding-left: 10px;
+  padding-right: 30px;
+
+  /* a border-box miatt, a padding nem adódik hozzá az elem szélességéhez */
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.search-field::placeholder {
+  color: #c4c4c4;
+}
+
+.search-field:focus {
+  outline: none;
+}
+
+.search-button {
+  border: none;
+  background-image: url('./img/search.png');
+  background-color: transparent;
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 5px;
+  right: 7px;
+}
+
+.menu-button {
+  font-size: 4rem;
+  margin: 10px;
+  display: none;
+}
+
+.close-menu {
+  font-size: 3rem;
+  text-align: right;
+  margin-right: 20px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.title {
+  padding-top: 20vh;
+}
+
+.page-title {
+  font-size: 8rem;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1rem;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(92, 138, 208);
+  background-color: rgba(36, 53, 78, 0.34);
+  width: 80vw;
+  margin: 0 auto;
+  padding: 6rem 0;
+  border: 1px solid rgb(174, 255, 255);
+  border: 1px solid rgba(174, 255, 255, 0.68);
+  color: white;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: #0091ff;
+  background-color: #fff;
+  width: 30vw;
+  padding: 2rem 0;
+  margin: -20px auto 0 auto;
+  border-top: 3px solid #0091ff;
+  font-size: 2rem;
+}
+
+@media (max-width: 1400px) {
+  main {
+    margin: 20vw 3vw 0 3vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  header {
+    padding: 0;
+  }
+
+  header .search-bar {
+    margin-right: 40px;
+  }
+
+  main {
+    margin: 20vw 1vw 0 1vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .logo {
+    order: 1;
+    padding: 7px;
+  }
+
+  header .search-bar {
+    margin-left: auto;
+    order: 2;
+  }
+
+  .header-container {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  header .main-menu {
+    order: 3;
+    height: 60px;
+    display: flex;
+    align-items: center;
+  }
+
+  header .main-menu ul {
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  header .main-menu ul {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .main-menu ul li::after {
+    content: "";
+  }
+
+  header .main-menu {
+    position: absolute;
+    width: 50%;
+    text-align: center;
+    top: 40px;
+    right: -50%;
+  }
+
+  header .main-menu ul li a {
+    color: white;
+  }
+
+  .menu-button {
+    display: block;
+    order: 3;
+  }
+}
+
+.js-apper {
+  display: block !important;
+}
+
+.js-hidden {
+  display: none;
+}
+
+.js-menu-open {
+  right: 50%;
+}
